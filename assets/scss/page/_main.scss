@@ -28,6 +28,7 @@
         font-size: max(26px,2.2vw);
         font-weight: 500;
         letter-spacing: -0.4px;
+        @include mobile { font-size: 20px; }
 
         .desc { line-height: 1.5; }
     }
@@ -61,8 +62,9 @@
 
 /*** SC-POFOL ***/
 .sc-pofol {
-    @include mobile { padding: 22vw 0; }
     padding: 13vw 0;
+    background-color: $color-white;
+    @include mobile { padding: 22vw 0; }
     
     .group-title { 
         @include mobile { margin-bottom: 20vw; }
@@ -229,7 +231,7 @@
             z-index: 4;
             flex-wrap: wrap;
             padding: 0 4vw;
-            @include mobile { bottom: 10px; }
+            @include mobile { bottom: 10px; gap: 6px; }
         }
         
         .bg {
@@ -304,11 +306,16 @@
         margin-top: 24px;
         @include tablet { flex-direction: column; }
 
+        .column-right {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            @include mobile { gap: 6px; }
+        }
         .tag { 
             color: $color-black; 
             border: 1px solid $color-black; 
         }
-        .tag~.tag { margin-left: 8px; }
     }
     .group-bg {
         position: absolute;

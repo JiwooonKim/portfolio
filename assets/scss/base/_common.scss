@@ -22,6 +22,7 @@ html { scroll-behavior: smooth; }
     z-index: 50;
     pointer-events: none;
     mix-blend-mode: difference;
+    @include mobile { display: none; }
     
     .pointer {
         position: absolute;
