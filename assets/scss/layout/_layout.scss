@@ -1,0 +1,124 @@
+
+.header {
+    @include flexSet(space-between,center);
+    @include mobile { height: 80px; }
+    position: absolute;
+    width: 100%; height: 100px;
+    padding: 0 5vw;
+    background-color: transparent;
+    color: $color-white;
+    z-index: 2;
+
+    .logo-area {
+        @include mobile { margin: 0 auto; }
+    }
+    .logo { 
+        @include flexCenter;
+        width: 42px; height: 42px;
+        font-family: $font-point;
+        font-size: 70px;
+        font-weight: bold;
+        color: #000;
+        border-radius: 50%;
+        background-color: $color-point;
+        overflow: hidden;
+    }
+    .gnb-area {
+        @include mobile { display: none; }
+    }
+    .gnb-list {
+        display: flex;
+        gap: 20px;
+    }
+    .gnb-item { padding: 4px; }
+}
+
+
+/*** FOOTER ***/
+.footer {
+    position: relative;
+    height: 100vh;
+
+    .common-inner { 
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%; 
+        padding-bottom: 70px;
+    }
+
+    .group-top { 
+        @include flexCenter;
+        height: 100%; 
+    }
+    .group-bottom {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+            @include flexVerticalCenter;
+            flex-direction: column;
+            gap: 14px;
+        }
+    }
+    video {
+        @include positionCenter;
+        object-fit: cover;
+        width: 100%; height: 100%;
+    }
+
+    .title-area {
+        @include flexCenter;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: $color-white;
+
+        .oval {
+            border: 2px solid $color-point;
+            font-family: $font-point;
+            color: $color-point;
+            font-size: 9vw;
+    
+            &:hover .text {
+                &::after { transform: translateY(-18%); }
+            }
+    
+            .text {
+                display: block;
+                padding: 0 40px;
+        
+                &::before { background-color: $color-point; }
+                &::after { color: $color-black; }
+            }
+        }
+    }
+    .video-area {
+        overflow: hidden;
+
+        video { @include positionCenter; }
+    }
+    .contact-area {
+        color: $color-point;
+
+        .contact-list {
+            display: flex;
+            gap: 14px;
+        }
+        .oval { 
+            width: 100px;  height: 30px; 
+            border: 2px solid $color-point;
+        }
+        .text { 
+            text-align: center; 
+
+            &::before { background-color: $color-point; }
+            &::after { color: $color-black; }
+        }
+    }
+    .policy-area { 
+        @include flexCenter;
+        color: $color-white;
+    }
+}
+

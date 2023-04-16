@@ -1,0 +1,54 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexVerticalCenter {
+    display: flex;
+    align-items: center;
+}
+@mixin flexHorizonCenter {
+    display: flex;
+    justify-content: center;
+}
+@mixin flexSet($jc,$ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+@mixin positionCenter {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin positionVerticalCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin positionHorizonCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin positionSet($top,$left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+/* reponsive viewport */
+$mobile: 640px;
+$tablet: 1023px;
+
+/* responsive */
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
