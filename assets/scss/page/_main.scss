@@ -88,14 +88,10 @@
         position: relative;
         width: 9.8vw;
         height: 9.8vw;
-        min-width: 62px;
-        min-height: 62px;
         margin: 0 0.5vw;
-        @include tablet { 
-            width: 7vw;
-            height: 7vw;
-            min-width: 56px;
-            min-height: 56px;
+        @include mobile { 
+            width: 12vw;
+            height: 12vw;
             margin: 0 4px; 
         }
 
@@ -196,6 +192,7 @@
                 border-radius: 5vw;
                 overflow: hidden;
                 @include tablet { height: 60vh;  min-height: 380px; }
+                @include mobile { height: 50vh; }
             }
             .img-box::after {
                 content: '';
@@ -211,9 +208,7 @@
                 z-index: 1;
                 &.list2 { right: 0; justify-content: flex-end; }
             }
-            .reel-list { 
-                @include flexVerticalCenter; 
-            }
+            .reel-list { @include flexVerticalCenter; }
             .reel-item {
                 padding-left: 2.4vw;
                 @include tablet { gap: 24px; }
@@ -224,9 +219,10 @@
                     font-size: 10vw;
                     gap: 2.4vw;
                     color: $color-white;
-                    @include mobile { font-size: 12vh; }
+                    @include mobile { font-size: 12vw; }
                 }
             }
+            .circle {  border: none; }
         }
         .tag-box {
             position: absolute;

@@ -311,9 +311,8 @@ html {
   }
 }
 .header .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  position: relative;
   width: 42px;
   height: 42px;
   font-family: "gallery-modern";
@@ -323,6 +322,12 @@ html {
   border-radius: 50%;
   background-color: #e0fd60;
   overflow: hidden;
+}
+.header .logo span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @media (max-width: 640px) {
   .header .gnb-area {
@@ -553,16 +558,12 @@ html {
   position: relative;
   width: 9.8vw;
   height: 9.8vw;
-  min-width: 62px;
-  min-height: 62px;
   margin: 0 0.5vw;
 }
-@media (max-width: 1023px) {
+@media (max-width: 640px) {
   .sc-pofol .icon-box {
-    width: 7vw;
-    height: 7vw;
-    min-width: 56px;
-    min-height: 56px;
+    width: 12vw;
+    height: 12vw;
     margin: 0 4px;
   }
 }
@@ -708,6 +709,11 @@ html {
     min-height: 380px;
   }
 }
+@media (max-width: 640px) {
+  .sc-pofol .pofol-item .img-area .img-box {
+    height: 50vh;
+  }
+}
 .sc-pofol .pofol-item .img-area .img-box::after {
   content: "";
   position: absolute;
@@ -751,8 +757,11 @@ html {
 }
 @media (max-width: 640px) {
   .sc-pofol .pofol-item .img-area .reel-item a {
-    font-size: 12vh;
+    font-size: 12vw;
   }
+}
+.sc-pofol .pofol-item .img-area .circle {
+  border: none;
 }
 .sc-pofol .pofol-item .tag-box {
   position: absolute;

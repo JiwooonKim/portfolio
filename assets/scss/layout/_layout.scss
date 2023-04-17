@@ -13,7 +13,8 @@
         @include mobile { margin: 0 auto; }
     }
     .logo { 
-        @include flexCenter;
+        display: block;
+        position: relative;
         width: 42px; height: 42px;
         font-family: $font-point;
         font-size: 70px;
@@ -22,6 +23,10 @@
         border-radius: 50%;
         background-color: $color-point;
         overflow: hidden;
+
+        span {
+            @include positionCenter;
+        }
     }
     .gnb-area {
         @include mobile { display: none; }
