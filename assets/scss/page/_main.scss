@@ -21,7 +21,7 @@
         flex-direction: column;
         letter-spacing: -.03em;
         font-size: max(96px, 12vw);
-        padding-top: 100px;
+        padding-top: 30px;
     }
     .group-desc {
         padding: 9vh 0 20vh;
@@ -75,6 +75,7 @@
         video {
             display: flex;
             width: 17vw;
+            min-width: 100px;
             border-radius: 1000px;
             margin-left: 1.5vw;
         }
@@ -87,11 +88,15 @@
         position: relative;
         width: 9.8vw;
         height: 9.8vw;
+        min-width: 62px;
+        min-height: 62px;
         margin: 0 0.5vw;
         @include tablet { 
-            width: 80px;
-            height: 80px;
-            margin: 0 8px;
+            width: 7vw;
+            height: 7vw;
+            min-width: 56px;
+            min-height: 56px;
+            margin: 0 4px; 
         }
 
         .circle {
@@ -102,7 +107,7 @@
             border-radius: 50%;
             background-repeat: no-repeat;
             animation: circle 10s infinite linear;
-            box-shadow: 0px 0px 7px 4px rgb(0 0 0 / 10%)
+            border: 1px solid #555;
         }
         .star {
             @include positionCenter;
@@ -219,7 +224,7 @@
                     font-size: 10vw;
                     gap: 2.4vw;
                     color: $color-white;
-                    @include mobile { font-size: 80px; }
+                    @include mobile { font-size: 12vh; }
                 }
             }
         }

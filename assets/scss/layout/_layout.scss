@@ -73,25 +73,6 @@
         z-index: 2;
         text-align: center;
         color: $color-white;
-
-        .oval {
-            border: 1px solid $color-point;
-            font-family: $font-point;
-            color: $color-point;
-            font-size: 9vw;
-    
-            &:hover .text {
-                &::after { transform: translateY(-18%); }
-            }
-    
-            .text {
-                display: block;
-                padding: 0 40px;
-        
-                &::before { background-color: $color-point; }
-                &::after { color: $color-black; }
-            }
-        }
     }
     .video-area {
         overflow: hidden;
@@ -107,7 +88,7 @@
         }
         .oval { 
             width: 100px;  height: 30px; 
-            border: 2px solid $color-point;
+            border: 1px solid $color-point;
         }
         .text { 
             text-align: center; 
@@ -119,6 +100,7 @@
     .policy-area { 
         @include flexCenter;
         color: $color-white;
+        @include mobile { font-size: 14px; }
     }
 }
 

@@ -282,7 +282,7 @@ html {
     font-size: 16vw;
   }
   .headline .font-point {
-    font-size: 18vw;
+    font-size: 17vw;
   }
   .sc-visual .blink-bar {
     display: none;
@@ -387,25 +387,6 @@ html {
   text-align: center;
   color: #fff;
 }
-.footer .title-area .oval {
-  border: 1px solid #e0fd60;
-  font-family: "gallery-modern";
-  color: #e0fd60;
-  font-size: 9vw;
-}
-.footer .title-area .oval:hover .text::after {
-  transform: translateY(-18%);
-}
-.footer .title-area .oval .text {
-  display: block;
-  padding: 0 40px;
-}
-.footer .title-area .oval .text::before {
-  background-color: #e0fd60;
-}
-.footer .title-area .oval .text::after {
-  color: #000;
-}
 .footer .video-area {
   overflow: hidden;
 }
@@ -425,7 +406,7 @@ html {
 .footer .contact-area .oval {
   width: 100px;
   height: 30px;
-  border: 2px solid #e0fd60;
+  border: 1px solid #e0fd60;
 }
 .footer .contact-area .text {
   text-align: center;
@@ -441,6 +422,11 @@ html {
   justify-content: center;
   align-items: center;
   color: #fff;
+}
+@media (max-width: 640px) {
+  .footer .policy-area {
+    font-size: 14px;
+  }
 }
 
 .overflow {
@@ -471,7 +457,7 @@ html {
   flex-direction: column;
   letter-spacing: -0.03em;
   font-size: max(96px, 12vw);
-  padding-top: 100px;
+  padding-top: 30px;
 }
 @media (max-width: 640px) {
   .sc-visual .group-typo {
@@ -551,6 +537,7 @@ html {
 .sc-pofol .group-title video {
   display: flex;
   width: 17vw;
+  min-width: 100px;
   border-radius: 1000px;
   margin-left: 1.5vw;
 }
@@ -566,13 +553,17 @@ html {
   position: relative;
   width: 9.8vw;
   height: 9.8vw;
+  min-width: 62px;
+  min-height: 62px;
   margin: 0 0.5vw;
 }
 @media (max-width: 1023px) {
   .sc-pofol .icon-box {
-    width: 80px;
-    height: 80px;
-    margin: 0 8px;
+    width: 7vw;
+    height: 7vw;
+    min-width: 56px;
+    min-height: 56px;
+    margin: 0 4px;
   }
 }
 .sc-pofol .icon-box .circle {
@@ -586,7 +577,7 @@ html {
   border-radius: 50%;
   background-repeat: no-repeat;
   animation: circle 10s infinite linear;
-  box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #555;
 }
 .sc-pofol .icon-box .star {
   position: absolute;
@@ -760,7 +751,7 @@ html {
 }
 @media (max-width: 640px) {
   .sc-pofol .pofol-item .img-area .reel-item a {
-    font-size: 80px;
+    font-size: 12vh;
   }
 }
 .sc-pofol .pofol-item .tag-box {
