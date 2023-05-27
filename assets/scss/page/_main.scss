@@ -15,13 +15,16 @@
 
     .group-typo {
         @include flexSet(center,flex-start);
-        @include mobile { font-size: 19vw; }
         height: 100vh;
         min-height: 520px;
         flex-direction: column;
         letter-spacing: -.03em;
         font-size: max(96px, 12vw);
         padding-top: 30px;
+        @include mobile { 
+            font-size: 19vw; 
+            padding-top: 0;
+        }
     }
     .group-desc {
         padding: 9vh 0 20vh;
@@ -129,7 +132,6 @@
         display: flex;
         flex-direction: column;
         gap: 6vh;
-
         @include mobile { gap: 30px; }
     }
     .pofol-item {
@@ -142,6 +144,9 @@
         margin: 1vw 0;
         @include mobile { gap: 20px; }
         
+        &:hover .img-area .img-box::after {
+            background: rgba(0,0,0,0.2);
+        }
         .desc-area {
             @include flexSet(space-between,flex-end);
             gap: 20px;
@@ -155,8 +160,9 @@
             }
 
             .title { 
-                font-size: max(32px, 3vw); font-weight: bold; line-height: 1.1; 
-                @include mobile { font-size: 34px; }
+                font-size: max(28px, 3vw); 
+                font-weight: bold; 
+                line-height: 1.1; 
             }
             .desc { font-size: 1.5vw; margin-top: 10px; }
             .link-box { display: flex; gap: 10px;  }
@@ -166,6 +172,11 @@
                 font-weight: 500;  
                 background-color: $color-point; 
                 border: 0px;
+                @include mobile { 
+                    width: 130px; 
+                    height: 26px; 
+                    font-size: 14px; 
+                }
 
                 .oval-text {
                     &::before { background-color: $color-black; }
@@ -192,15 +203,17 @@
                 border-radius: 5vw;
                 overflow: hidden;
                 @include tablet { height: 60vh;  min-height: 380px; }
-                @include mobile { height: 50vh; }
-            }
-            .img-box::after {
-                content: '';
-                position: absolute;
-                top: 0; left: 0; right: 0; bottom: 0;
-                background: rgba(0,0,0,0.2);
-                border-radius: 5vw;
-                pointer-events: none;
+                @include mobile { height: 40vh; }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                    background: rgba(0,0,0,0.7);
+                    border-radius: 5vw;
+                    pointer-events: none;
+                    transition: 0.3s cubic-bezier(.17,.67,.85,.58);
+                }
             }
             .reel-box {
                 @include positionVerticalCenter;
@@ -268,6 +281,8 @@
             width: 100%;
             font-weight: 400;
             font-size: 18px;
+            letter-spacing: 0.02em;
+            @include mobile { font-size: 14px; }
         }
     }
     .about-list {
@@ -299,7 +314,7 @@
         .title { 
             margin-bottom: 14px; 
             font-weight: 600; 
-            font-size: max(26px,2.2vw); 
+            font-size: max(22px,2.2vw); 
         }
     }
     .goals-area {
