@@ -24,7 +24,6 @@ $(function(){
             scrollTrigger: {
                 trigger: element.parentElement,
                 start: "0% 80%",
-                markers: true
             },
             y: 0,
             ease: "cubic-bezier(.34,1.56,.64,1)",
@@ -50,7 +49,7 @@ $(function(){
         gsap.to(element, {
             scrollTrigger: {
                 trigger: element,
-                start: "0% 70%",
+                start: "0% 80%",
                 end: "100% 100%"
             },
             ease: "cubic-bezier(.34,1.56,.64,1)",
