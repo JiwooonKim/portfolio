@@ -4,7 +4,8 @@
     @include flexSet(space-between,center);
     @include mobile { height: 80px; }
     position: absolute;
-    width: 100%; height: 100px;
+    width: 100%; 
+    height: max(8vw, 100px);
     padding: 0 5vw;
     background-color: transparent;
     color: $color-white;
@@ -16,7 +17,8 @@
         &__link {
             display: block;
             position: relative;
-            width: 42px; height: 42px;
+            width: max(4vw,42px); 
+            height: max(4vw,42px);
             font-family: $font-point;
             font-size: 70px;
             font-weight: bold;
@@ -25,14 +27,17 @@
             background-color: $color-point;
             overflow: hidden;
         }
-        &__text { @include positionCenter; }
+        &__text { 
+            @include positionCenter; 
+            font-size: max(6.4vw,68px);
+        }
     }
     .gnb-area {
         @include mobile { display: none; }
 
         &__list {
             display: flex;
-            gap: 10px;
+            gap: max(1vw,10px);
         }
         &__item {
             overflow-x: hidden;
@@ -41,6 +46,7 @@
             position: relative;
             display: block;
             padding: 8px 10px; 
+            font-size: max(1.4vw, 16px);
             font-weight: normal;
 
             &:hover::before  {
@@ -110,8 +116,9 @@
         color: $color-point;
 
         .oval { 
-            width: 100px;  height: 30px; 
+            width: max(10vw,100px);  height: max(2.4vw,30px); 
             border: 1px solid $color-point;
+            font-size: max(1.4vw, 16px);
         }
         .text { 
             text-align: center; 
@@ -123,6 +130,7 @@
         @include flexCenter;
         @include mobile { font-size: 14px; }
         color: $color-white;
+        font-size: max(1.4vw, 16px);
     }
     &__bg-video {
         @include positionCenter;

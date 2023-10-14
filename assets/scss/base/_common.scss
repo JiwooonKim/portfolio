@@ -91,11 +91,14 @@ html { scroll-behavior: smooth; }
     }
 }
 .tag {
+    @include tablet { padding: 4px 10px; }
+    @include mobile { font-size: 14px; }
     display: inline-block;
     border: 1px solid $color-white;
     color: $color-white;
-    border-radius: 20px;
-    padding: 6px 12px;
+    border-radius: 10em;
+    padding: 0.4vw 1vw;
+    font-size: max(1.4vw, 16px);
     font-weight: 300;
 }
 .desc {

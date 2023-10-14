@@ -254,7 +254,7 @@ aboutList.forEach(element => {
     const tag = element.querySelectorAll('.sc-about__tag');
 
     gsap.set(titleText , { yPercent: 100 });
-    gsap.set(charText, { yPercent: 100 });
+    gsap.set(charText, { yPercent: 200, opacity: 0 });
     gsap.set(tag, { yPercent: 100, opacity: 0 });
 
     const t2 = gsap.timeline({
@@ -269,7 +269,8 @@ aboutList.forEach(element => {
         .addLabel('a')
         .to(charText, {
             yPercent: 0,
-            stagger: 0.03,
+            opacity: 1,
+            stagger: 0.03
         },'a')
         .to(tag, {
             yPercent: 0,
