@@ -1,0 +1,76 @@
+{
+    "items": [
+        {
+            "id": "0",
+            "snippet":{
+                "title": "LOCUS-X CLONE <br class='br-tb'>CODING",
+                "reviewLink": "https://velog.io/@kjwboa/Portfolio-LOCUS-X-nylp60bq",
+                "img": "./assets/images/pofol_locusx.jpg",
+                "alt": "locus-x 포트폴리오",
+                "shorcutLink": "https://jiwooonkim.github.io/locus-x/",
+                "tag" : ["적응형PC","SCSS","JS","GSAP"],
+                "data-x": 100
+            }
+        },
+        {
+            "id": "1",
+            "snippet":{
+                "title": "SHOPPING LIVE <br class='br-tb'>CLONE CODING",
+                "reviewLink": "https://velog.io/@kjwboa/Portfolio-Naver-Shoppinglive",
+                "img": "./assets/images/pofol_live.jpg",
+                "alt": "네이버 쇼핑라이브 포트폴리오",
+                "shorcutLink": "https://jiwooonkim.github.io/shopping-live/",
+                "tag" : ["적응형MOBILE","SCSS","JS","데이터바인딩","SWIPER"],
+                "data-x": -100
+            }
+        },
+        {
+            "id": "2",
+            "snippet":{
+                "title": "NAVER CAREERS <br class='br-tb'>CLONE CODING",
+                "reviewLink": "https://velog.io/@kjwboa/Portfolio-Naver-Career",
+                "img": "./assets/images/pofol_career.jpg",
+                "alt": "네어버커리어 클론코딩 포트폴리오",
+                "shorcutLink": "https://jiwooonkim.github.io/naver-careers/",
+                "tag" : ["반응형","JS","SWIPER"],
+                "data-x": 100
+            }
+        },
+        {
+            "id": "3",
+            "snippet":{
+                "title": "ANDAR <br class='br-tb'>CLONE CODING",
+                "reviewLink": "https://velog.io/@kjwboa/Portfolio-ANDAR",
+                "img": "./assets/images/pofol_andar1.jpg",
+                "alt": "안다르 클론코딩 포트폴리오",
+                "shorcutLink": "https://jiwooonkim.github.io/andar/",
+                "tag" : ["적응형PC","JS","SWIPER"],
+                "data-x": -100
+            }
+        },
+        {
+            "id": "4",
+            "snippet":{
+                "title": "SEOULCITY <br class='br-tb'>CLONE CODING",
+                "reviewLink": "https://velog.io/@kjwboa/Portfolio-SEOULCITY",
+                "img": "./assets/images/pofol_seoul.jpg",
+                "alt": "서울시청 클론코딩 포트폴리오",
+                "shorcutLink": "https://jiwooonkim.github.io/seoulcity",
+                "tag" : ["적응형PC","접근성","SWIPER"],
+                "data-x": 100
+            }
+        },
+        {
+            "id": "5",
+            "snippet":{
+                "title": "NAVER <br class='br-tb'>CLONE CODING",
+                "reviewLink": "https://velog.io/@kjwboa/NAVER",
+                "img": "./assets/images/pofol_naver1.jpg",
+                "alt": "네이버 클론코딩 포트폴리오",
+                "shorcutLink": "https://jiwooonkim.github.io/naver/",
+                "tag" : ["적응형PC","접근성"],
+                "data-x": -100
+            }
+        }
+    ]
+}

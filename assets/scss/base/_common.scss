@@ -1,5 +1,15 @@
 html { scroll-behavior: smooth; }
-.overflow { display: block; }
+.overflow { 
+    display: block; 
+    position: relative; 
+    overflow: hidden; 
+
+    .text { display: inline-block; }
+}
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1;}
+}
 .blind {
     position: absolute;
     width: 1px; height: 1px;
@@ -8,22 +18,26 @@ html { scroll-behavior: smooth; }
     clip: rect(0 0 0 0);
 }
 .common-inner { 
-    @include mobile {
-        padding: 0 14px;
-    }
+    @include mobile { padding: 0 14px; }
     margin: 0 auto;
     padding: 0 5.5vw; 
 }
-.br-mo { display: none; }
-.br-tb { display: none; @include tablet{display: block;} }
-
+.br-tb { 
+    @include tablet { display: block; } 
+    display: none; 
+}
+.br-mo { 
+    @include mobile { display: block; }
+    display: none; 
+}
+.char { display: inline-block; }
 /* ELEMENT */
 .cursor {
+    @include mobile { display: none; }
     position: fixed;
     z-index: 50;
     pointer-events: none;
     mix-blend-mode: difference;
-    @include mobile { display: none; }
     
     .pointer {
         position: absolute;
@@ -38,7 +52,6 @@ html { scroll-behavior: smooth; }
 .oval {
     display: block;
 	position: relative;
-    border: 2px solid $color-point;
     border-radius: 1000px;
     overflow: hidden;
     transition: 0.3s;
@@ -77,13 +90,6 @@ html { scroll-behavior: smooth; }
         }
     }
 }
-.blink-bar {
-    animation: blink backwards 1s steps(1) infinite;
-    @keyframes blink {
-        0%, 100% { opacity: 0; }
-        50% { opacity: 1;}
-    }
-}
 .tag {
     display: inline-block;
     border: 1px solid $color-white;
@@ -91,25 +97,20 @@ html { scroll-behavior: smooth; }
     border-radius: 20px;
     padding: 6px 12px;
     font-weight: 300;
-    @include mobile { font-size: 12px; }
 }
 .desc {
     letter-spacing: -0.3px;
     line-height: 1.3;
 }
-.headline { 
-    .font-point { font-size: 11vw; }
-    .font-normal { font-size: 10vw; }
-}
-.font-point { font-family: $font-point; font-size: 150px; }
-
-@include mobile {
-    .br-mo { display: block; }
-    .headline {
-        .font-normal { font-size: 16vw; }
-        .font-point { font-size: 17vw; }
-    } 
-    .sc-visual {
-        .blink-bar { display: none; }
+.headline--font {
+    &-point { 
+        @include mobile { font-size: 16vw; }
+        font-family: $font-point; 
+        font-size: 11vw; 
+    }
+    &-normal { 
+        @include mobile { font-size: 16vw; }
+        font-size: 10vw; 
     }
 }
+
