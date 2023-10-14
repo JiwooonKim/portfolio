@@ -107,7 +107,7 @@ html {
 .overflow {
   display: block;
   position: relative;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 .overflow .text {
   display: inline-block;
@@ -240,7 +240,7 @@ html {
   color: #fff;
   border-radius: 10em;
   padding: 0.4vw 1vw;
-  font-size: max(1.4vw, 16px);
+  font-size: max(1.2vw, 16px);
   font-weight: 300;
 }
 @media (max-width: 1023px) {
@@ -284,7 +284,7 @@ html {
   align-items: center;
   position: absolute;
   width: 100%;
-  height: max(8vw, 100px);
+  height: max(7.6vw, 100px);
   padding: 0 5vw;
   background-color: transparent;
   color: #fff;
@@ -303,8 +303,8 @@ html {
 .header .logo-area__link {
   display: block;
   position: relative;
-  width: max(4vw, 42px);
-  height: max(4vw, 42px);
+  width: max(3.6vw, 42px);
+  height: max(3.6vw, 42px);
   font-family: "gallery-modern";
   font-size: 70px;
   font-weight: bold;
@@ -336,7 +336,7 @@ html {
   position: relative;
   display: block;
   padding: 8px 10px;
-  font-size: max(1.4vw, 16px);
+  font-size: max(1.2vw, 16px);
   font-weight: normal;
 }
 .header .gnb-area__link:hover::before {
@@ -412,11 +412,16 @@ html {
   gap: 14px;
   color: #e0fd60;
 }
+@media (max-width: 640px) {
+  .footer__contact-list {
+    gap: 10px;
+  }
+}
 .footer__contact-list .oval {
   width: max(10vw, 100px);
   height: max(2.4vw, 30px);
   border: 1px solid #e0fd60;
-  font-size: max(1.4vw, 16px);
+  font-size: max(1.2vw, 16px);
 }
 .footer__contact-list .text {
   text-align: center;
@@ -432,7 +437,7 @@ html {
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-size: max(1.4vw, 16px);
+  font-size: max(1.2vw, 16px);
 }
 @media (max-width: 640px) {
   .footer__policy-area {
@@ -936,8 +941,8 @@ html {
 }
 @media (max-width: 640px) {
   .sc-about__tag-list {
-    -moz-column-gap: 4px;
-         column-gap: 4px;
+    -moz-column-gap: 6px;
+         column-gap: 6px;
   }
 }
 .sc-about__tag {

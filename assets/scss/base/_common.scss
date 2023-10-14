@@ -2,7 +2,7 @@ html { scroll-behavior: smooth; }
 .overflow { 
     display: block; 
     position: relative; 
-    overflow: hidden; 
+    overflow-y: hidden; 
 
     .text { display: inline-block; }
 }
@@ -98,7 +98,7 @@ html { scroll-behavior: smooth; }
     color: $color-white;
     border-radius: 10em;
     padding: 0.4vw 1vw;
-    font-size: max(1.4vw, 16px);
+    font-size: max(1.2vw, 16px);
     font-weight: 300;
 }
 .desc {
